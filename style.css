@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #f4f4f4;
+    font-family: system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    /* Cortando as asas do fantasma do AOS */
+    width: 100%;
+    /* Forçando o site a não vazar nem 1 pixel do celular */
+}
+
+
+
+
+nav {
+    background-color: #000000;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.5s;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 1. A Janela da Tesoura: Fixa o tamanho em 40px e corta as sobras pretas da foto! */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    /* O tamanho que você realmente quer que a Logo tenha na Navbar */
+    overflow: hidden;
+    /* A Mágica do CSS: Qualquer coisa que vazar desses 50px será invisível! */
+    text-decoration: none;
+}
+
+/* 2. O Zoom da Câmera: Força a imagem gigante a estufar até a Logo aparecer na janela */
+.logo-img {
+    height: 250px;
+    /* Dando um zoom violento para contornar o arquivo da Inteligência Artificial */
+}
+
+
+
+#ulnavbar {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    gap: 40px;
+    margin-left: 0px;
+}
+
+
+
+#ulnavbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+#ulnavbar a:hover {
+
+    color: #ffcc00;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul,
+ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+    transform: scale(1.05);
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    padding: 20px 20px
+}
+
+.hero-section-content {
+    background-color: #0a192f;
+    padding: 160px 0 100px;
+
+}
+
+.hero-section-content p,
+.hero-section-content h1 {
+    color: white;
+}
+
+.hero-section-content .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-section-content .btn-whatsapp {
+    margin-left: 0;
+}
+
+.hero-section-content-image img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+.programs {
+    text-align: center;
+}
+
+
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #ffffff;
+    /* Fundo branco e limpo */
+    padding: 30px;
+    /* Cartão gordinho e grande */
+    border-radius: 15px;
+    /* Bordas arredondadas e amigáveis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* A Sombra Cinza Invisível do iPhone */
+    text-align: center;
+    /* Alinha o texto no meio */
+    transition: 0.3s;
+    /* Preparando para o pulo */
+}
+
+/* O pulso magnético ao passar o mouse */
+.card:hover {
+    transform: translateY(-10px)
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image img {
+    max-width: 400px;
+    border-radius: 20px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about h2 {
+    text-align: left;
+}
+
+.about p {
+    text-align: justify;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+}
+
+/* =========================================
+   CHEFE FINAL: MODO CELULAR 📱
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* 1. Mágica Ninja: Fazendo o menu evaporar no celular! */
+    #ulnavbar {
+        display: none;
+
+    }
+
+    /* 2. Mantendo a Logo centralizada (ou flex-start se quiser na esquerda) */
+    nav .container {
+        justify-content: flex-start;
+
+    }
+
+    /* 3. Afinando a barra preta para virar uma Fita elegante tipo a do CDF PRO */
+    nav {
+        padding: 15px 20px;
+        border-bottom-left-radius: 15px;
+        /* Bordas menos exageradas no mobile */
+        border-bottom-right-radius: 15px;
+    }
+
+
+
+
+    /* 2. As Seções de Foto (Hero e Sobre): Parem de tentar ficar lado a lado! Fiquem em Coluna! */
+    .hero-section-content .container,
+    .about .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* 3. A Grade de Cartões: Esqueça as 3 colunas "repeat(3, 1fr)". Faça apenas 1 coluna gigante! */
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 4. Trazendo o botão do Zap do Hero para o centro (já que a coluna centralizou) */
+    .hero-section-content .btn-whatsapp {
+        margin: 20px auto 0 auto;
+    }
+
+    /* 5. Adequando o título titânico para telas pequenas */
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Uma Logo mais delicada para não expandir demais a barra preta do celular */
+    .logo-img {
+        height: 150px;
+    }
+
+
+
+}
