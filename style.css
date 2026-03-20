@@ -105,21 +105,44 @@ nav .container {
     align-items: center;
 }
 
-/* 1. A Janela da Tesoura: Fixa o tamanho em 40px e corta as sobras pretas da foto! */
 .logo {
     display: inline-flex;
     align-items: center;
-    height: 50px;
-    /* O tamanho que você realmente quer que a Logo tenha na Navbar */
-    overflow: hidden;
-    /* A Mágica do CSS: Qualquer coisa que vazar desses 50px será invisível! */
+    gap: 12px;
     text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
-/* 2. O Zoom da Câmera: Força a imagem gigante a estufar até a Logo aparecer na janela */
-.logo-img {
-    height: 250px;
-    /* Dando um zoom violento para contornar o arquivo da Inteligência Artificial */
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    border: 3.5px solid var(--primary-green);
+    border-radius: 2px 14px 14px 2px; /* O formato de "D" */
+    position: relative;
+}
+
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    width: 3.5px;
+    height: 40px;
+    background: var(--primary-green);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    border-radius: 2px;
+}
+
+.logo-text {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-family: 'Outfit', sans-serif;
 }
 
 
